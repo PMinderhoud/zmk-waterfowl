@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty_layer {
 /* QWERTY
  *
  * ,----------------------------------.                      ,----------------------------------.
@@ -28,7 +28,7 @@
  */
             bindings = <
     &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y   &kp U       &kp I       &kp O       &kp P
-    &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G           &kp H   &mt LSHFT J &mt LCTRL K &mt LALT L  &mt LGUI SEMI
+    &mt LGUI A  &mt LALT S  &mt LCTRL D &mt LSHFT F &kp G           &kp H   &mt RSHFT J &mt RCTRL K &mt RALT L  &mt RGUI SEMI
     &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N   &kp M       &kp COMMA   &kp DOT     &kp FSLH
     &kp N1      &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2          &kp N3  &kp ESC     &kp BSPC    &lt 2 RET   &kp N4
             >;
@@ -40,6 +40,64 @@
                 &inc_dec_kp LEFT RIGHT
             >;
         };
+
+        semimak_layer {
+/* Semimak JQZ
+ *
+ * ,----------------------------------.                      ,----------------------------------.
+ * |   F  |   L  |   H  |   V  |   X  |                      |   '  |   W  |   U  |   O  |   Y  |
+ * |------+------+------+------+------|                      |------+------+------+------+------|
+ * |   S  |   R  |   N  |   T  |   K  |                      |   C  |   D  |   E  |   A  |   I  |
+ * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
+ * |   Z  |   J  |   B  |   M  |   Q  |  |  2  |    |  3  |  |   P  |   G  |   ,  |   .  |   /  |
+ * `----------------------------------'  `-----'    `-----'  `----------------------------------'
+ *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
+ *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
+ *          `-----'   `--------------------'            `--------------------'   `-----'
+ */
+            bindings = <
+    &kp F       &kp L       &kp H       &kp V       &kp X           &kp SQT  &kp W       &kp U       &kp O       &kp Y
+    &mt LGUI S  &mt LALT R  &mt LCTRL N &mt LSHFT T &kp K           &kp C    &mt RSHFT D &mt RCTRL E &mt RALT A  &mt RGUI I
+    &kp Z       &kp J       &kp B       &kp M       &kp Q           &kp P    &kp G       &kp COMMA   &kp DOT     &kp FSLH
+    &kp N1      &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2          &kp N3   &kp ESC     &kp BSPC    &lt 2 RET   &kp N4
+            >;
+
+            sensor-bindings = <
+                &inc_dec_kp PAGE_DOWN PAGE_UP
+                &inc_dec_kp C_VOL_DN C_VOL_UP
+                &inc_dec_kp DOWN UP
+                &inc_dec_kp LEFT RIGHT
+            >;
+        };   
+
+        recurva_layer {
+/* Recurva colstag 1 
+ *
+ * ,----------------------------------.                      ,----------------------------------.
+ * |   F  |   R  |   D  |   P  |   V  |                      |   Q  |   M  |   U  |   O  |   Y  |
+ * |------+------+------+------+------|                      |------+------+------+------+------|
+ * |   S  |   N  |   T  |   C  |   B  |                      |   .  |   H  |   E  |   A  |   I  |
+ * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
+ * |   Z  |   X  |   K  |   G  |   W  |  |  2  |    |  3  |  |   J  |   L  |   ;  |   '  |   ,  |
+ * `----------------------------------'  `-----'    `-----'  `----------------------------------'
+ *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
+ *          |  1  |   | DEL | SPACE | TAB  |            |  ESC  | BS | ENTER |   |  4  |
+ *          `-----'   `--------------------'            `--------------------'   `-----'
+ */
+            bindings = <
+    &kp F       &kp R       &kp D       &kp P       &kp V           &kp Q    &kp M       &kp U       &kp O       &kp Y
+    &mt LGUI S  &mt LALT N  &mt LCTRL T &mt LSHFT C &kp B           &kp DOT  &mt RSHFT H &mt RCTRL E &mt RALT A  &mt RGUI I
+    &kp Z       &kp X       &kp K       &kp G       &kp W           &kp J    &kp L       &kp SEMI    &kp SQT     &kp COMMA
+    &kp N1      &lt 3 DEL   &lt 1 SPACE &kp TAB     &kp N2          &kp N3   &kp ESC     &kp BSPC    &lt 2 RET   &kp N4
+            >;
+
+            sensor-bindings = <
+                &inc_dec_kp PAGE_DOWN PAGE_UP
+                &inc_dec_kp C_VOL_DN C_VOL_UP
+                &inc_dec_kp DOWN UP
+                &inc_dec_kp LEFT RIGHT
+            >;
+        };      
 
         navnum_layer {
 /* NAVNUM
