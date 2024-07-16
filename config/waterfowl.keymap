@@ -356,7 +356,7 @@
                 <&inc_dec_kp DOWN UP>,
                 <&inc_dec_kp LEFT RIGHT>;
                 
-            label = "Semimak JQZ";
+            label = "Recurva";
         };
 
         semimak_layer {
