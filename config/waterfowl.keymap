@@ -248,8 +248,8 @@
                 <&kp U>;
 
             label = "QUMacro";
-            wait-ms = <10>;
-            tap-ms = <10>;
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         select_word_right: select_word_right {
@@ -344,7 +344,7 @@
  */
 
             bindings = <
-&kp F        &kp R        &kp D         &kp P         &kp V            &kp Q    &kp M         &kp U         &kp O            &kp Y
+&kp F        &kp R        &kp D         &kp P         &kp V            &qumacro    &kp M         &kp U         &kp O            &kp Y
 &hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT  &hmr RSHFT H  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
 &kp Z        &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI      &kp SQT          &kp COMMA
 &kp N1       &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &kp N4
@@ -407,10 +407,10 @@
  */
 
             bindings = <
-&kp Q       &kp W       &kp E        &kp R        &kp T     &kp Y   &kp U        &kp I        &kp O       &kp P
-&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G     &kp H   &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
-&kp Z       &kp X       &kp C        &kp V        &kp B     &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH
-&kp N1      &lt 4 DEL   &lt 1 SPACE  &kp TAB      &kp N2    &kp N3  &kp ESC      &kp BSPC     &lt 0 RET   &kp N4
+&kp Q       &kp W       &kp E        &kp R        &kp T            &kp Y   &kp U        &kp I        &kp O       &kp P
+&mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G            &kp H   &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
+&kp Z       &kp X       &kp C        &kp V        &kp B            &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH
+&none       &lt 4 DEL   &kp TAB      &kp ESC      &kp LC(LS(M))    &none   &kp DEL      &lt 5 ENTER  &lt 4 BACKSPACE  &none
             >;
 
             sensor-bindings = <
