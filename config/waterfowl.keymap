@@ -355,6 +355,8 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp DOWN UP>,
                 <&inc_dec_kp LEFT RIGHT>;
+                
+            label = "Semimak JQZ";
         };
 
         semimak_layer {
@@ -385,6 +387,8 @@
                 &inc_dec_kp DOWN UP
                 &inc_dec_kp LEFT RIGHT
             >;
+
+            label = "Semimak JQZ";
         };
 
         qwerty_layer {
@@ -415,6 +419,8 @@
                 &inc_dec_kp DOWN UP
                 &inc_dec_kp LEFT RIGHT
             >;
+
+            label = "QWERTY yuck...";
         };
 
         nav_layer {
@@ -445,6 +451,8 @@
                 &rotate_extend_line
                 &rotate_extend_word
             >;
+
+            label = "Navigation";
         };
 
         symbol_layer {
@@ -474,6 +482,8 @@
                 <&inc_dec_kp AMPS PIPE>,
                 <&inc_dec_kp DOWN UP>,
                 <&inc_dec_kp LEFT RIGHT>;
+
+            label = "Symbol/Num";
         };
 
         function_layer {
@@ -504,6 +514,8 @@
                 &inc_dec_kp DOWN UP
                 &inc_dec_kp LEFT RIGHT
             >;
+            
+            label = "Function";
         };
 
         adjust_layer {
@@ -513,6 +525,8 @@
 &none         &none         &none         &none         &bt BT_CLR_ALL    &none        &none       &none  &none  &none
 &none         &none         &none         &none         &none             &none        &none       &none  &none  &none
             >;
+
+            label = "Adjust";
         };
 
         altsym_layer {
@@ -523,7 +537,7 @@
 &trans         &trans        &trans      &trans         &trans         &trans         &trans        &trans         &trans         &trans
             >;
 
-            label = "AS";
+            label = "Alt Symbol";
         };
     };
 
