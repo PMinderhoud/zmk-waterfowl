@@ -474,7 +474,7 @@
 &kp PRCNT      &kp PLUS     &kp MINUS     &kp DOLLAR       &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp AT
 &mt LWIN EXCL  &mt LALT LT  &mt LCTRL GT  &mt LSHFT EQUAL  &kp LPAR    &kp RPAR  &kp N1  &kp N2  &kp N3  &kp N0
 &kp CARET      &kp ASTRK    &kp SLASH     &kp UNDER        &kp LBKT    &kp RBKT  &kp N4  &kp N5  &kp N6  &kp DOT
-&kp AMPS       &trans       &trans        &trans           &trans      &trans    &trans  &trans  &trans  &kp
+&kp AMPS       &trans       &trans        &trans           &trans      &trans    &trans  &trans  &trans  &kp PIPE
             >;
 
             sensor-bindings =
@@ -483,7 +483,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Symbol/Num";
+            label = "Symbol / Num";
         };
 
         function_layer {
