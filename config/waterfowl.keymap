@@ -156,6 +156,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        rotate_extend_word: rotate_extend_word {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ROTATE_EXTEND_WORD";
+            #sensor-binding-cells = <0>;
+            bindings = <&extend_word_right>, <&extend_word_left>;
+        };
+
+        rotate_extend_line: rotate_extend_line {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ROTATE_EXTEND_LINE";
+            #sensor-binding-cells = <0>;
+            bindings = <&extend_line_right>, <&extend_line_left>;
+        };
     };
 
     macros {
