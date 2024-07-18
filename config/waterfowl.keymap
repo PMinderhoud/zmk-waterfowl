@@ -350,10 +350,10 @@
  */
 
             bindings = <
-&kp F        &kp R        &kp D         &kp P         &kp V            &qumacro    &kp M         &kp U         &kp O            &kp Y
-&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT  &hmr RSHFT H  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
-&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI      &kp SQT          &kp COMMA
-&none        &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&kp F        &kp R        &kp D         &kp P         &kp V            &qumacro  &kp M         &kp U         &kp O            &kp Y
+&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT   &hmr RSHFT H  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
+&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J     &kp L         &kp SEMI      &kp SQT          &kp COMMA
+&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3    &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
             >;
 
             sensor-bindings =
@@ -361,7 +361,7 @@
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
-                
+
             label = "Recurva";
         };
 
@@ -413,10 +413,10 @@
  */
 
             bindings = <
-&kp Q       &kp W       &kp E        &kp R        &kp T            &kp Y   &kp U        &kp I        &kp O       &kp P
-&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L  &hmr RGUI SEMI
-&kp Z       &kp X       &kp C        &kp V        &kp B            &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH
-&none        &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&kp Q        &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I         &kp O            &kp P
+&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L      &hmr RGUI SEMI
+&kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA     &kp DOT          &kp FSLH
+&none        &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3  &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
             >;
 
             sensor-bindings = <
@@ -477,10 +477,10 @@
  */
 
             bindings = <
-&kp PRCNT      &kp PLUS     &kp MINUS     &kp DOLLAR       &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp AT
+&kp PRCNT       &kp PLUS      &kp MINUS      &kp DOLLAR        &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp AT
 &hml LWIN EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LPAR    &kp RPAR  &kp N1  &kp N2  &kp N3  &kp N0
-&kp CARET      &kp ASTRK    &kp SLASH     &kp UNDER        &kp LBKT    &kp RBKT  &kp N4  &kp N5  &kp N6  &kp DOT
-&kp AMPS       &trans       &trans        &trans           &trans      &trans    &trans  &trans  &trans  &kp PIPE
+&kp CARET       &kp ASTRK     &kp SLASH      &kp UNDER         &kp LBKT    &kp RBKT  &kp N4  &kp N5  &kp N6  &kp DOT
+&kp AMPS        &trans        &trans         &trans            &trans      &trans    &trans  &trans  &trans  &kp PIPE
             >;
 
             sensor-bindings =
@@ -520,7 +520,7 @@
                 &inc_dec_kp PAGE_UP PAGE_DOWN
                 &inc_dec_kp LEFT RIGHT
             >;
-            
+
             label = "Function";
         };
 
@@ -544,6 +544,17 @@
             >;
 
             label = "Alt Symbol";
+        };
+
+        Diacrit_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans      &trans      &cmp GRAVE E  &trans      &trans
+&trans  &trans  &trans  &trans  &trans    &cmp DQT U  &cmp DQT O  &cmp DQT E    &cmp DQT A  &cmp DQT I
+&trans  &trans  &trans  &trans  &trans    &trans      &trans      &cmp SQT E    &trans      &trans
+&trans  &trans  &trans  &trans  &trans    &trans      &trans      &trans        &trans      &trans
+            >;
+
+            label = "Diacrit";
         };
     };
 
