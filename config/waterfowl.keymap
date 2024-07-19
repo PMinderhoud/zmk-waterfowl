@@ -57,12 +57,6 @@
             key-positions = <29 28>;
         };
 
-        isnot {
-            bindings = <&isnot>;
-            key-positions = <10 13>;
-            layers = <4>;
-        };
-
         capsword {
             bindings = <&capsword>;
             key-positions = <13 16>;
@@ -72,6 +66,97 @@
             bindings = <&kp GRAVE>;
             key-positions = <LT4 LT3>;
             layers = <0 1 2 3>;
+        };
+        // Symbol layer
+        isnot {
+            bindings = <&isnot>;
+            key-positions = <10 13>;
+            layers = <4>;
+        };
+
+        lambda {
+            bindings = <&lambda>;
+            key-positions = <LM1 LM2>;
+            layers = <4>;
+        };
+
+        lambdablk {
+            bindings = <&lambdablk>;
+            key-positions = <LM1 LM2 LM3>;
+            layers = <4>;
+        };
+
+        ZeroZero {
+            bindings = <&zerozero>;
+            key-positions = <RM3 RM4>;
+            layers = <4>;
+        };
+
+        ZeroZeroZero {
+            bindings = <&zerozerozero>;
+            key-positions = <RM2 RM3 RM4>;
+            layers = <4>;
+        };
+
+        // Diacrits
+        u_caret {
+            bindings = <&cmp CARET U>;
+            key-positions = <RM0 RB0>;
+            layers = <8>;
+        };
+
+        o_caret {
+            bindings = <&cmp CARET O>;
+            key-positions = <RM1 RB1>;
+            layers = <8>;
+        };
+
+        e_caret {
+            bindings = <&cmp CARET E>;
+            key-positions = <RM2 RB2>;
+            layers = <8>;
+        };
+
+        a_caret {
+            bindings = <&cmp CARET A>;
+            key-positions = <RM3 RB3>;
+            layers = <8>;
+        };
+
+        i_caret {
+            bindings = <&cmp CARET I>;
+            key-positions = <RM4 RB4>;
+            layers = <8>;
+        };
+
+        uu_caret {
+            bindings = <&cmpu CARET U>;
+            key-positions = <RM0 RB0>;
+            layers = <9>;
+        };
+
+        ou_caret {
+            bindings = <&cmpu CARET O>;
+            key-positions = <RM1 RB1>;
+            layers = <9>;
+        };
+
+        eu_caret {
+            bindings = <&cmpu CARET E>;
+            key-positions = <RM2 RB2>;
+            layers = <9>;
+        };
+
+        au_caret {
+            bindings = <&cmpu CARET A>;
+            key-positions = <RM3 RB3>;
+            layers = <9>;
+        };
+
+        iu_caret {
+            bindings = <&cmpu CARET I>;
+            key-positions = <RM4 RB4>;
+            layers = <9>;
         };
     };
 
@@ -125,6 +210,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
+        };
+
+        qutap: qutap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "QUTAP";
+            #binding-cells = <0>;
+            bindings = <&qumacro>, <&kp Q>;
+
+            tapping-term-ms = <200>;
         };
 
         extend_line: extend_line {
@@ -213,6 +307,8 @@
             #binding-cells = <0>;
             bindings = <&kp I &kp S &kp SPACE &kp N &kp O &kp T &kp SPACE>;
             label = "ISNOT";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         lambda: lambda {
@@ -220,6 +316,8 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
             label = "LAMBDA";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         lambdablk: lambdablk {
@@ -227,6 +325,8 @@
             #binding-cells = <0>;
             bindings = <&lambda &kp LBRC &kp ENTER>;
             label = "LAMBDABLK";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         zerozero: zerozero {
@@ -234,6 +334,8 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0>;
             label = "ZEROZERO";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         zerozerozero: zerozerozero {
@@ -241,6 +343,8 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0>;
             label = "ZEROZEROZERO";
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
 
         qumacro: QuMacro {
@@ -350,7 +454,7 @@
  */
 
             bindings = <
-&kp F        &kp R        &kp D         &kp P         &kp V            &qumacro  &kp M         &kp U         &kp O            &kp Y
+&kp F        &kp R        &kp D         &kp P         &kp V            &qutap    &kp M         &kp U         &kp O            &kp Y
 &hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT   &hmr RSHFT H  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
 &kp Z        &kp X        &kp K         &kp G         &kp W            &kp J     &kp L         &kp SEMI      &kp SQT          &kp COMMA
 &none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3    &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
@@ -383,8 +487,8 @@
             bindings = <
 &kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U         &kp O            &kp Y
 &hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
-&kp Z        &kp J        &kp B         &kp M         &kp Q            &kp P    &kp G         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA     &kp DOT          &kp FSLH
+&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
             >;
 
             sensor-bindings = <
@@ -413,10 +517,10 @@
  */
 
             bindings = <
-&kp Q        &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I         &kp O            &kp P
+&qutap       &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I         &kp O            &kp P
 &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L      &hmr RGUI SEMI
 &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 3 SPACE  &lt 7 TAB     &kp ESC       &kp LC(LS(M))    &kp N3  &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3  &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
             >;
 
             sensor-bindings = <
@@ -548,13 +652,24 @@
 
         Diacrit_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans      &trans      &cmp GRAVE E  &trans      &trans
-&trans  &trans  &trans  &trans  &trans    &cmp DQT U  &cmp DQT O  &cmp DQT E    &cmp DQT A  &cmp DQT I
-&trans  &trans  &trans  &trans  &trans    &trans      &trans      &cmp SQT E    &trans      &trans
-&trans  &trans  &trans  &trans  &trans    &trans      &trans      &trans        &trans      &trans
+&smile LPAR  &smile PIPE  &smile RPAR  &cmp EQUAL E  &none       &cmp GRAVE U  &cmp GRAVE O  &cmp GRAVE E  &cmp GRAVE A  &cmp GRAVE I
+&cmp S S     &none        &none        &mo 9         &none       &cmp DQT U    &cmp DQT O    &cmp DQT E    &cmp DQT A    &cmp DQT I
+&none        &none        &none        &none         &none       &cmp SQT U    &cmp SQT O    &cmp SQT E    &cmp SQT A    &cmp SQT I
+&trans       &trans       &trans       &trans        &trans      &trans        &trans        &trans        &trans        &trans
             >;
 
             label = "Diacrit";
+        };
+
+        Diacrit_Upper_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &cmpu GRAVE U  &cmpu GRAVE O  &cmpu GRAVE E  &cmpu GRAVE A  &cmpu GRAVE I
+&trans  &trans  &trans  &trans  &trans    &cmpu DQT U    &cmpu DQT O    &cmpu DQT E    &cmpu DQT A    &cmpu DQT I
+&trans  &trans  &trans  &trans  &trans    &cmpu SQT U    &cmpu SQT O    &cmpu SQT E    &cmpu SQT A    &cmpu SQT I
+&trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans
+            >;
+
+            label = "DIACRIT";
         };
     };
 
