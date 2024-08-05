@@ -454,10 +454,10 @@
  */
 
             bindings = <
-&kp F        &kp R        &kp D         &kp P         &kp V            &qutap    &kp M         &kp U         &kp O            &kp Y
-&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT   &hmr RSHFT H  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
-&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J     &kp L         &kp SEMI      &kp SQT          &kp COMMA
-&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3    &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&kp F        &kp R        &kp D         &kp P         &kp V            &qutap    &kp M         &kp U            &kp O            &kp Y
+&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT   &hmr RSHFT H  &hmr RCTRL E     &hmr RALT A      &hmr RGUI I
+&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J     &kp L         &kp SEMI         &kp SQT          &kp COMMA
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
             >;
 
             sensor-bindings =
@@ -488,7 +488,7 @@
 &kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U         &kp O            &kp Y
 &hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
 &kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3   &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
             >;
 
             sensor-bindings = <
@@ -520,7 +520,7 @@
 &qutap       &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I         &kp O            &kp P
 &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L      &hmr RGUI SEMI
 &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 3 SPACE  &lt 8 TAB     &lt 7 ESC     &kp LC(LS(M))    &kp N3  &kp DEL       &lt 5 ENTER   &lt 4 BACKSPACE  &none
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
             >;
 
             sensor-bindings = <
