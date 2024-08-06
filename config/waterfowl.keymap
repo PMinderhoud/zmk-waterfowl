@@ -67,7 +67,9 @@
             key-positions = <LT4 LT3>;
             layers = <0 1 2 3>;
         };
+
         // Symbol layer
+
         isnot {
             bindings = <&isnot>;
             key-positions = <10 13>;
@@ -99,6 +101,7 @@
         };
 
         // Diacrits
+
         u_caret {
             bindings = <&cmp CARET U>;
             key-positions = <RM0 RB0>;
@@ -454,10 +457,10 @@
  */
 
             bindings = <
-&kp F        &kp R        &kp D         &kp P         &kp V            &qutap    &kp M         &kp U            &kp O            &kp Y
-&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT   &hmr RSHFT H  &hmr RCTRL E     &hmr RALT A      &hmr RGUI I
-&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J     &kp L         &kp SEMI         &kp SQT          &kp COMMA
-&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
+&kp F        &kp R        &kp D         &kp P         &kp V            &qutap   &kp M         &kp U            &kp O        &kp Y
+&hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT  &hmr RSHFT H  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
+&kp Z        &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI         &kp SQT      &kp COMMA
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3   &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings =
@@ -485,10 +488,10 @@
  */
 
             bindings = <
-&kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U         &kp O            &kp Y
-&hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E  &hmr RALT A      &hmr RGUI I
-&kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
+&kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U            &kp O        &kp Y
+&hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
+&kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA        &kp DOT      &kp FSLH
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3   &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings = <
@@ -517,10 +520,10 @@
  */
 
             bindings = <
-&qutap       &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I         &kp O            &kp P
-&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K  &hmr RALT L      &hmr RGUI SEMI
-&kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA     &kp DOT          &kp FSLH
-&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3    &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL  &none
+&qutap       &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I            &kp O        &kp P
+&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMI
+&kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA        &kp DOT      &kp FSLH
+&none        &lt 7 ESC    &lt 3 SPACE   &lt 8 TAB     &kp LC(LS(M))    &kp N3  &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings = <
@@ -631,7 +634,7 @@
         adjust_layer {
             bindings = <
 &bootloader   &sys_reset    &bt BT_PRV    &bt BT_NXT    &bt BT_CLR_ALL    &bootloader  &sys_reset  &none  &none  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &none        &to 0       &to 1  &to 2  &none
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &to 10       &to 0       &to 1  &to 2  &none
 &none         &none         &none         &none         &bt BT_CLR_ALL    &none        &none       &none  &none  &none
 &none         &none         &none         &none         &none             &none        &none       &none  &none  &none
             >;
@@ -652,10 +655,10 @@
 
         Diacrit_layer {
             bindings = <
-&smile LPAR  &smile PIPE  &smile RPAR  &cmp EQUAL E  &none       &cmp GRAVE U  &cmp GRAVE O  &cmp GRAVE E  &cmp GRAVE A  &cmp GRAVE I
-&cmp S S     &none        &none        &mo 9         &none       &cmp DQT U    &cmp DQT O    &cmp DQT E    &cmp DQT A    &cmp DQT I
-&none        &none        &none        &none         &none       &cmp SQT U    &cmp SQT O    &cmp SQT E    &cmp SQT A    &cmp SQT I
-&trans       &trans       &trans       &trans        &trans      &trans        &trans        &trans        &trans        &trans
+&smile LPAR  &smile PIPE  &smile RPAR  &cmp EQUAL E  &none     &cmp GRAVE U  &cmp GRAVE O  &cmp GRAVE E  &cmp GRAVE A  &cmp GRAVE I
+&cmp S S     &none        &none        &mo 9         &none     &cmp DQT U    &cmp DQT O    &cmp DQT E    &cmp DQT A    &cmp DQT I
+&none        &none        &none        &none         &none     &cmp SQT U    &cmp SQT O    &cmp SQT E    &cmp SQT A    &cmp SQT I
+&trans       &trans       &trans       &trans        &trans    &trans        &trans        &trans        &trans        &trans
             >;
 
             label = "Diacrit";
@@ -670,6 +673,17 @@
             >;
 
             label = "DIACRIT";
+        };
+
+        Dusk_layer {
+            bindings = <
+&kp X   &kp F     &kp D  &kp P    &kp Q     &kp J   &kp SQT  &kp O      &kp U     &kp DOT
+&kp N   &kp S     &kp T  &kp C    &kp Y     &kp M   &kp H    &kp A      &kp E     &kp I
+&kp B   &kp V     &kp K  &kp G    &kp W     &kp Z   &kp L    &kp SEMI   &kp FSLH  &kp COMMA
+&trans  &kp BSPC  &kp R  &kp TAB  &trans    &trans  &kp RET  &kp SPACE  &kp DEL   &trans
+            >;
+
+            label = "Dusk";
         };
     };
 
