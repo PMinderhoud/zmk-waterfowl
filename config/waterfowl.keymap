@@ -678,7 +678,7 @@
         Dusk_layer {
             bindings = <
 &kp X   &kp F     &kp D  &kp P    &kp Q     &kp J   &kp SQT  &kp O      &kp U     &kp DOT
-&kp N   &kp S     &kp T  &kp C    &kp Y     &kp M   &kp H    &kp A      &kp E     &kp I
+&hml LWIN N   &hml LALT S     &hml LCTRL T  &hml LSHIFT C    &kp Y     &kp M   &hmr RSHIFT H    &hmr RCTRL A      &hmr RALT E     &hmr RGUI I
 &kp B   &kp V     &kp K  &kp G    &kp W     &kp Z   &kp L    &kp SEMI   &kp FSLH  &kp COMMA
 &trans  &kp BSPC  &kp R  &kp TAB  &trans    &trans  &kp RET  &kp SPACE  &kp DEL   &trans
             >;
