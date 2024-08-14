@@ -36,7 +36,7 @@
         dquot {
             bindings = <&kp DQT>;
             key-positions = <27 28>;
-            layers = <0 5>;
+            layers = <0 4>;
         };
 
         question {
@@ -67,7 +67,7 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <LT4 LT3>;
-            layers = <0 1 3 4>;
+            layers = <0 1 3 11>;
         };
 
         // Symbol layer
@@ -75,31 +75,31 @@
         isnot {
             bindings = <&isnot>;
             key-positions = <10 13>;
-            layers = <5>;
+            layers = <4>;
         };
 
         lambda {
             bindings = <&lambda>;
             key-positions = <LM1 LM2>;
-            layers = <5>;
+            layers = <4>;
         };
 
         lambdablk {
             bindings = <&lambdablk>;
             key-positions = <LM1 LM2 LM3>;
-            layers = <5>;
+            layers = <4>;
         };
 
         ZeroZero {
             bindings = <&zerozero>;
             key-positions = <RM3 RM4>;
-            layers = <5>;
+            layers = <4>;
         };
 
         ZeroZeroZero {
             bindings = <&zerozerozero>;
             key-positions = <RM2 RM3 RM4>;
-            layers = <5>;
+            layers = <4>;
         };
 
         // Diacrits
@@ -107,61 +107,61 @@
         u_caret {
             bindings = <&cmp CARET U>;
             key-positions = <RM0 RB0>;
-            layers = <9>;
+            layers = <8>;
         };
 
         o_caret {
             bindings = <&cmp CARET O>;
             key-positions = <RM1 RB1>;
-            layers = <9>;
+            layers = <8>;
         };
 
         e_caret {
             bindings = <&cmp CARET E>;
             key-positions = <RM2 RB2>;
-            layers = <9>;
+            layers = <8>;
         };
 
         a_caret {
             bindings = <&cmp CARET A>;
             key-positions = <RM3 RB3>;
-            layers = <9>;
+            layers = <8>;
         };
 
         i_caret {
             bindings = <&cmp CARET I>;
             key-positions = <RM4 RB4>;
-            layers = <9>;
+            layers = <8>;
         };
 
         uu_caret {
             bindings = <&cmpu CARET U>;
             key-positions = <RM0 RB0>;
-            layers = <10>;
+            layers = <9>;
         };
 
         ou_caret {
             bindings = <&cmpu CARET O>;
             key-positions = <RM1 RB1>;
-            layers = <10>;
+            layers = <9>;
         };
 
         eu_caret {
             bindings = <&cmpu CARET E>;
             key-positions = <RM2 RB2>;
-            layers = <10>;
+            layers = <9>;
         };
 
         au_caret {
             bindings = <&cmpu CARET A>;
             key-positions = <RM3 RB3>;
-            layers = <10>;
+            layers = <9>;
         };
 
         iu_caret {
             bindings = <&cmpu CARET I>;
             key-positions = <RM4 RB4>;
-            layers = <10>;
+            layers = <9>;
         };
 
         esc_combo {
@@ -467,7 +467,7 @@
 &kp F        &kp R        &kp D         &kp P         &kp V            &qutap   &kp M         &kp U            &kp O        &kp Y
 &hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT  &hmr RSHFT H  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
 &kp Z        &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI         &kp SQT      &kp COMMA
-&none        &sk LSHFT    &lt 4 SPACE   &lt 9 TAB     &kp LC(LS(M))    &tog 11   &lt 11 ENTER     &lt 5 BACKSPACE  &lt 6 DEL    &none
+&none        &sk LSHFT    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings =
@@ -498,7 +498,7 @@
 &kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U            &kp O        &kp Y
 &hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
 &kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA        &kp DOT      &kp FSLH
-&none        &sk LSHFT    &lt 4 SPACE   &lt 9 TAB     &kp LC(LS(M))    &tog 11  &lt 11 ENTER  &lt 5 BACKSPACE  &lt 6 DEL    &none
+&none        &sk LSHFT    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings = <
@@ -538,10 +538,10 @@
  */
 
             bindings = <
-&qutap       &kp W        &kp E         &kp R         &kp T            &kp Y   &kp U         &kp I            &kp O        &kp P
-&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H   &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMI
-&kp Z        &kp X        &kp C         &kp V         &kp B            &kp N   &kp M         &kp COMMA        &kp DOT      &kp FSLH
-&none        &lt 8 ESC    &lt 4 SPACE   &lt 9 TAB     &kp LC(LS(M))    &tog 11  &kp ENTER     &lt 5 BACKSPACE  &lt 6 DEL    &none
+&qutap       &kp W        &kp E         &kp R         &kp T            &kp Y    &kp U         &kp I            &kp O        &kp P
+&hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H    &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMI
+&kp Z        &kp X        &kp C         &kp V         &kp B            &kp N    &kp M         &kp COMMA        &kp DOT      &kp FSLH
+&none        &lt 7 ESC    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &kp ENTER     &lt 4 BACKSPACE  &lt 5 DEL    &none
             >;
 
             sensor-bindings = <
@@ -552,38 +552,6 @@
             >;
 
             label = "QWERTYuck";
-        };
-
-        nav_layer {
-            /* NAVNUM
- *
- * ,----------------------------------.                      ,----------------------------------.
- * |      | PgUp |  UP  | PgDn |      |                      |   /  |   7  |   8  |   9  |   -  |
- * |------+------+------+------+------|                      |------+------+------+------+------|
- * | Home | Left | Down | Right| End  |                      |   =  |   4  |   5  |   6  |   +  |
- * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
- * |      |      |  INS |      |      |  |  2  |    |  3  |  |   0  |   1  |   2  |   3  |   *  |
- * `----------------------------------'  `-----'    `-----'  `----------------------------------'
- *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
- *          |  1  |   | DEL | SPACE | MO(3)|            |  ESC  | BS | ENTER |   |  4  |
- *          `-----'   `--------------------'            `--------------------'   `-----'
- */
-
-            bindings = <
-&kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LG(V)     &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
-&kp LWIN          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN     &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
-&kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)   &kp HOME      &kp PG_DN    &kp PG_UP   &kp END
-&trans            &trans         &trans          &trans             &trans             &select_line  &trans        &trans       &trans      &select_word
-            >;
-
-            sensor-bindings = <
-                &inc_dec_kp PAGE_DOWN PAGE_UP
-                &inc_dec_kp C_VOL_DN C_VOL_UP
-                &rotate_extend_line
-                &rotate_extend_word
-            >;
-
-            label = "Nav";
         };
 
         symbol_layer {
@@ -674,7 +642,7 @@
         Diacrit_layer {
             bindings = <
 &smile LPAR  &smile PIPE  &smile RPAR  &cmp EQUAL E  &none     &cmp GRAVE U  &cmp GRAVE O  &cmp GRAVE E  &cmp GRAVE A  &cmp GRAVE I
-&cmp S S     &none        &none        &mo 10        &none     &cmp DQT U    &cmp DQT O    &cmp DQT E    &cmp DQT A    &cmp DQT I
+&cmp S S     &none        &none        &mo 9         &none     &cmp DQT U    &cmp DQT O    &cmp DQT E    &cmp DQT A    &cmp DQT I
 &none        &none        &none        &none         &none     &cmp SQT U    &cmp SQT O    &cmp SQT E    &cmp SQT A    &cmp SQT I
 &trans       &trans       &trans       &trans        &trans    &trans        &trans        &trans        &trans        &trans
             >;
@@ -695,10 +663,10 @@
 
         Coding {
             bindings = <
-&kp LS(LA(F))  &kp LS(F8)  &kp F9   &kp F5   &kp LS(F5)      &none      &kp LC(P)      &kp F12        &kp LA(F12)    &none
-&kp LS(LC(F))  &kp F8      &kp F11  &kp F10  &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &none          &none
-&none          &none       &none    &none    &none          &none      &kp LC(G)      &kp LS(F12)    &none          &none
-&none          &kp LC(DOT)    &lt 4 LC(SPACE)  &kp LA(SLASH)  &none      &tog 11    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)  &none
+&kp LS(LA(F))  &kp LS(F8)   &kp F9            &kp F5         &kp LS(F5)     &none      &kp LC(P)      &kp F12        &kp LA(F12)    &none
+&kp LS(LC(F))  &kp F8       &kp F11           &kp F10        &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &none          &none
+&none          &none        &none             &none          &none          &none      &kp LC(G)      &kp LS(F12)    &none          &none
+&none          &kp LC(DOT)  &lt 11 LC(SPACE)  &kp LA(SLASH)  &none          &tog 10    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)  &none
             >;
 
             sensor-bindings =
@@ -709,14 +677,46 @@
 
             label = "Coding";
         };
+
+        nav_layer {
+            /* NAVNUM
+ *
+ * ,----------------------------------.                      ,----------------------------------.
+ * |      | PgUp |  UP  | PgDn |      |                      |   /  |   7  |   8  |   9  |   -  |
+ * |------+------+------+------+------|                      |------+------+------+------+------|
+ * | Home | Left | Down | Right| End  |                      |   =  |   4  |   5  |   6  |   +  |
+ * |------+------+------+------+------|  ,-----.    ,-----.  |------+------+------+------+------|
+ * |      |      |  INS |      |      |  |  2  |    |  3  |  |   0  |   1  |   2  |   3  |   *  |
+ * `----------------------------------'  `-----'    `-----'  `----------------------------------'
+ *          ,-----.   ,--------------------.            ,--------------------.   ,-----.
+ *          |  1  |   | DEL | SPACE | MO(3)|            |  ESC  | BS | ENTER |   |  4  |
+ *          `-----'   `--------------------'            `--------------------'   `-----'
+ */
+
+            bindings = <
+&kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LG(V)     &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
+&kp LWIN          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN     &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
+&kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)   &kp HOME      &kp PG_DN    &kp PG_UP   &kp END
+&trans            &trans         &trans          &trans             &trans             &select_line  &trans        &trans       &trans      &select_word
+            >;
+
+            sensor-bindings = <
+                &inc_dec_kp PAGE_DOWN PAGE_UP
+                &inc_dec_kp C_VOL_DN C_VOL_UP
+                &rotate_extend_line
+                &rotate_extend_word
+            >;
+
+            label = "Nav";
+        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjustlayer {
-            if-layers = <4 5>;
-            then-layer = <7>;
+            if-layers = <11 4>;
+            then-layer = <6>;
         };
     };
 };
