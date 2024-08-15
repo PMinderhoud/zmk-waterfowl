@@ -513,10 +513,10 @@
 
         Dusk_layer {
             bindings = <
-&kp X        &kp F        &kp D         &kp P          &kp Q     &kp J   &kp SQT        &kp O         &kp U        &kp DOT
-&hml LWIN N  &hml LALT S  &hml LCTRL T  &hml LSHIFT C  &kp Y     &kp M   &hmr RSHIFT H  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I
-&kp B        &kp V        &kp K         &kp G          &kp W     &kp Z   &kp L          &kp SEMI      &kp FSLH     &kp COMMA
-&trans       &kp BSPC     &kp R         &kp TAB        &trans    &trans  &kp RET        &kp SPACE     &kp DEL      &trans
+&kp X        &kp F        &kp D         &kp P          &qutap    &kp J    &kp SQT           &kp O         &kp U         &kp DOT
+&hml LWIN N  &hml LALT S  &hml LCTRL T  &hml LSHIFT C  &kp Y     &kp M    &hmr RSHIFT H     &hmr RCTRL A  &hmr RALT E   &hmr RGUI I
+&kp B        &kp V        &kp K         &kp G          &kp W     &kp Z    &kp L             &kp SEMI      &kp FSLH      &kp COMMA
+&trans       &sk LSHIFT   &lt 11 R      &lt 8 TAB      &trans    &tog 10  &lt 10 BACKSPACE  &lt 4 SPACE   &lt 5 DELETE  &trans
             >;
 
             label = "Dusk";
@@ -697,7 +697,7 @@
 &kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LG(V)     &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
 &kp LWIN          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN     &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
 &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)   &kp HOME      &kp PG_DN    &kp PG_UP   &kp END
-&trans            &trans         &trans          &trans             &trans             &select_line  &trans        &trans       &trans      &select_word
+&trans            &trans         &trans          &trans             &trans             &select_line  &lt 10 ENTER  &trans       &trans      &select_word
             >;
 
             sensor-bindings = <
