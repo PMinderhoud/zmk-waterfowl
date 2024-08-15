@@ -168,6 +168,12 @@
             bindings = <&kp ESC>;
             key-positions = <31 38>;
         };
+
+        entercombo {
+            bindings = <&kp ENTER>;
+            key-positions = <19 29>;
+            layers = <2>;
+        };
     };
 
     behaviors {
