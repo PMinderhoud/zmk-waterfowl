@@ -522,8 +522,14 @@
 &kp X        &kp F        &kp D         &kp P          &qutap    &kp J    &kp SQT           &kp O         &kp U         &kp DOT
 &hml LWIN N  &hml LALT S  &hml LCTRL T  &hml LSHIFT C  &kp Y     &kp M    &hmr RSHIFT H     &hmr RCTRL A  &hmr RALT E   &hmr RGUI I
 &kp B        &kp V        &kp K         &kp G          &kp W     &kp Z    &kp L             &kp SEMI      &kp FSLH      &kp COMMA
-&trans       &sk LSHIFT   &lt 11 R      &lt 8 TAB      &trans    &tog 10  &lt 10 BACKSPACE  &lt 4 SPACE   &lt 5 DELETE  &trans
+&trans       &sk LSHIFT   &lt 11 R      &lt 8 TAB      &kp LC(LS(M))    &tog 10  &lt 10 BACKSPACE  &lt 4 SPACE   &lt 5 DELETE  &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp UP DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LEFT RIGHT>;
 
             label = "Dusk";
         };
