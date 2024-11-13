@@ -296,6 +296,13 @@
             label = "SMILE";
         };
 
+        ctrlk: ctrlk {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp LC(K) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "CTRLK";
+        };
+
         cmp: comp {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -663,10 +670,23 @@
         };
 
         Coding {
+                        /* Coding
+ *
+ * ,------------------------------------------------------.    ,------------------------------------------------------.
+ * |FORMAT    |PREV ERROR|SET BREAKP|RUN DEBUG |STOP DEBUG|    |          |QUICK OPEN|GOTO DEF  |PEEK DEF  |          |
+ * |----------+----------+----------+----------+----------|    |----------+----------+----------+----------+----------|
+ * |FIND FILES|NEXT ERROR|STEP INTO |STEP OVER |STEP OUT  |    |SHW SYMBLS|COMMAND PL|GOTO IMPLM|SHOW PARAM|          |
+ * |----------+----------+----------+----------+----------|    |----------+----------+----------+----------+----------|
+ * |ZEN       |          |          |          |          |    |          |GOTO LINE |SHOW REFS |          |          |
+ * '------------------------------------------------------'    '------------------------------------------------------'
+ *                     ,-----.   ,------------------------.            ,--------------------.   ,-----.
+ *                     |  1  |   | DEL | SPACE | COPILOT  |            |  ESC  | BS | ENTER |   |  4  |
+ *                     `-----'   `------------------------'            `--------------------'   `-----'
+ */
             bindings = <
 &kp LS(LA(F))  &kp LS(F8)   &kp F9            &kp F5         &kp LS(F5)     &none      &kp LC(P)      &kp F12        &kp LA(F12)    &none
-&kp LS(LC(F))  &kp F8       &kp F11           &kp F10        &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &none          &none
-&none          &none        &none             &none          &none          &none      &kp LC(G)      &kp LS(F12)    &none          &none
+&kp LS(LC(F))  &kp F8       &kp F11           &kp F10        &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &kp LC(LS(SPACE))          &none
+&ctrlk Z       &none        &none             &none          &none          &none      &kp LC(G)      &kp LS(F12)    &none          &none
 &none          &kp LC(DOT)  &lt 10 LC(SPACE)  &kp LA(SLASH)  &none          &tog 9     &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)  &none
             >;
 
