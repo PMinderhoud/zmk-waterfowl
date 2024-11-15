@@ -567,6 +567,12 @@
 &trans           &kp LSHIFT       &lt 11 SPACE  &lt 8 TAB     &trans    &trans    &lt 10 BACKSPACE  &lt 5 R       &lt 6 DELETE  &trans
             >;
 
+            sensor-bindings =
+                <&inc_dec_kp UP DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LEFT RIGHT>;
+
             label = "Night";
         };
 
