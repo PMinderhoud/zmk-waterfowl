@@ -174,6 +174,24 @@
             key-positions = <19 29>;
             layers = <2 3>;
         };
+
+        and_combo {
+            bindings = <&kp AMPS>;
+            key-positions = <6 16>;
+            layers = <5>;
+        };
+
+        or_combo {
+            bindings = <&kp PIPE>;
+            key-positions = <7 17>;
+            layers = <5>;
+        };
+
+        hash_combo {
+            bindings = <&kp HASH>;
+            key-positions = <3 13>;
+            layers = <5>;
+        };
     };
 
     behaviors {
