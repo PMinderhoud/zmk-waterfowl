@@ -475,6 +475,13 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        la_2par: la_2par {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp X &kp COMMA &kp Y &kp RPAR>;
+            label = "LA_2PAR";
+        };
     };
 
     keymap {
@@ -781,9 +788,9 @@
 
         lambda_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &kp Z   &trans      &kp UP    &kp LS(LPAR)
+&trans  &trans  &trans  &trans  &trans    &trans    &kp Z   &la_2par    &kp UP    &kp LPAR
 &trans  &trans  &trans  &trans  &trans    &kp SEMI  &kp X   &lambda     &kp DOT   &kp COMMA
-&trans  &trans  &trans  &trans  &trans    &trans    &kp Y   &lambdablk  &kp DOWN  &kp LS(RPAR)
+&trans  &trans  &trans  &trans  &trans    &trans    &kp Y   &lambdablk  &kp DOWN  &kp RPAR
 &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans      &trans    &trans
             >;
 
