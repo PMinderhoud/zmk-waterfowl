@@ -68,7 +68,7 @@
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <LT4 LT3>;
-            layers = <0 1 4 11>;
+            layers = <0 1 4 12>;
         };
 
         // Symbol layer
@@ -505,8 +505,8 @@
             bindings = <
 &kp F        &kp R        &kp D         &kp P         &kp V            &qutap   &kp M         &kp U            &kp O        &kp Y
 &hml LGUI S  &hml LALT N  &hml LCTRL T  &hml LSHFT C  &kp B            &kp DOT  &hmr RSHFT H  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
-&lt 13 Z     &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI         &kp SQT      &kp COMMA
-&none        &sk LSHFT    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 5 BACKSPACE  &lt 6 DEL    &none
+&lt 11 Z     &kp X        &kp K         &kp G         &kp W            &kp J    &kp L         &kp SEMI         &kp SQT      &kp COMMA
+&none        &sk LSHFT    &lt 12 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 5 BACKSPACE  &lt 6 DEL    &none
             >;
 
             sensor-bindings =
@@ -537,7 +537,7 @@
 &kp F        &kp L        &kp H         &kp V         &kp X            &kp SQT  &kp W         &kp U            &kp O        &kp Y
 &hml LGUI S  &hml LALT R  &hml LCTRL N  &hml LSHFT T  &kp K            &kp C    &hmr RSHFT D  &hmr RCTRL E     &hmr RALT A  &hmr RGUI I
 &kp Z        &kp J        &kp B         &kp M         &qutap           &kp P    &kp G         &kp COMMA        &kp DOT      &kp FSLH
-&none        &sk LSHFT    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 5 BACKSPACE  &lt 6 DEL    &none
+&none        &sk LSHFT    &lt 12 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &lt 10 ENTER  &lt 5 BACKSPACE  &lt 6 DEL    &none
             >;
 
             sensor-bindings = <
@@ -555,7 +555,7 @@
 &kp X        &kp F        &kp D         &kp P          &qutap           &kp SQT  &kp J             &kp O         &kp U         &kp DOT
 &hml LWIN N  &hml LALT S  &hml LCTRL T  &hml LSHIFT C  &kp Y            &kp M    &hmr RSHIFT H     &hmr RCTRL A  &hmr RALT E   &hmr RGUI I
 &kp B        &kp V        &kp K         &kp G          &kp W            &kp Z    &kp L             &kp SEMI      &kp FSLH      &kp COMMA
-&trans       &sk LSHIFT   &lt 11 R      &lt 8 TAB      &kp LC(LS(M))    &tog 10  &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
+&trans       &sk LSHIFT   &lt 12 R      &lt 8 TAB      &kp LC(LS(M))    &tog 10  &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
             >;
 
             sensor-bindings =
@@ -571,8 +571,8 @@
             bindings = <
 &kp B            &kp F            &kp L         &kp K         &qutap    &kp P    &kp G             &kp O         &kp U         &kp DOT
 &hml LEFT_WIN N  &hml LEFT_ALT S  &hml LCTRL H  &hml LSHFT T  &kp M     &kp Y    &hmr RSHFT C      &hmr RCTRL A  &hmr RALT E   &hmr RWIN I
-&lt 13 X         &kp V            &kp J         &kp D         &kp Z     &kp SQT  &kp W             &kp SEMI      &kp FSLH      &kp COMMA
-&trans           &kp LSHIFT       &lt 11 R      &lt 8 TAB     &trans    &trans   &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
+&lt 11 X         &kp V            &kp J         &kp D         &kp Z     &kp SQT  &kp W             &kp SEMI      &kp FSLH      &kp COMMA
+&trans           &kp LSHIFT       &lt 12 R      &lt 8 TAB     &trans    &trans   &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
             >;
 
             sensor-bindings =
@@ -603,7 +603,7 @@
 &qutap       &kp W        &kp E         &kp R         &kp T            &kp Y    &kp U         &kp I            &kp O        &kp P
 &hml LGUI A  &hml LALT S  &hml LCTRL D  &hml LSHFT F  &kp G            &kp H    &hmr RSHFT J  &hmr RCTRL K     &hmr RALT L  &hmr RGUI SEMI
 &kp Z        &kp X        &kp C         &kp V         &kp B            &kp N    &kp M         &kp COMMA        &kp DOT      &kp FSLH
-&none        &lt 7 ESC    &lt 11 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &kp ENTER     &lt 5 BACKSPACE  &lt 6 DEL    &none
+&none        &lt 7 ESC    &lt 12 SPACE  &lt 8 TAB     &kp LC(LS(M))    &tog 10  &kp ENTER     &lt 5 BACKSPACE  &lt 6 DEL    &none
             >;
 
             sensor-bindings = <
@@ -731,7 +731,7 @@
 &kp LS(LA(F))  &kp LS(F8)   &kp F9            &kp F5         &kp LS(F5)     &none      &kp LC(P)      &kp F12        &kp LA(F12)        &none
 &kp LS(LC(F))  &kp F8       &kp F11           &kp F10        &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &kp LC(LS(SPACE))  &none
 &ctrlk Z       &none        &none             &none          &none          &none      &kp LC(G)      &kp LS(F12)    &none              &none
-&none          &kp LC(DOT)  &lt 11 LC(SPACE)  &kp LA(SLASH)  &none          &tog 10    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)      &none
+&none          &kp LC(DOT)  &lt 12 LC(SPACE)  &kp LA(SLASH)  &none          &tog 10    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)      &none
             >;
 
             sensor-bindings =
@@ -741,6 +741,17 @@
                 <&inc_dec_kp LEFT RIGHT>;
 
             label = "Coding";
+        };
+
+        lambda_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans    &kp Z   &la_2par    &kp UP    &kp LPAR
+&trans  &trans  &trans  &trans  &trans    &kp SEMI  &kp X   &lambda     &kp DOT   &kp COMMA
+&trans  &trans  &trans  &trans  &trans    &trans    &kp Y   &lambdablk  &kp DOWN  &kp RPAR
+&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans      &trans    &trans
+            >;
+
+            label = "Lambda";
         };
 
         nav_layer {
@@ -785,25 +796,14 @@
 
             label = "Adjust";
         };
-
-        lambda_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans    &kp Z   &la_2par    &kp UP    &kp LPAR
-&trans  &trans  &trans  &trans  &trans    &kp SEMI  &kp X   &lambda     &kp DOT   &kp COMMA
-&trans  &trans  &trans  &trans  &trans    &trans    &kp Y   &lambdablk  &kp DOWN  &kp RPAR
-&trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans      &trans    &trans
-            >;
-
-            label = "Lambda";
-        };
     };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjustlayer {
-            if-layers = <11 5>;
-            then-layer = <12>;
+            if-layers = <12 5>;
+            then-layer = <13>;
         };
     };
 };
