@@ -243,14 +243,12 @@
 
         capsword: capsword {
             compatible = "zmk,behavior-caps-word";
-            label = "CAPSWORD";
             #binding-cells = <0>;
             continue-list = <UNDERSCORE MINUS>;
         };
 
         easynew: easynew {
             compatible = "zmk,behavior-mod-morph";
-            label = "EASYNEW";
             bindings = <&kp LC(N)>, <&kp N>;
 
             #binding-cells = <0>;
@@ -259,7 +257,6 @@
 
         easyclose: easyclose {
             compatible = "zmk,behavior-mod-morph";
-            label = "EASYCLOSE";
             bindings = <&kp LC(F4)>, <&kp F4>;
 
             #binding-cells = <0>;
@@ -268,7 +265,6 @@
 
         qutap: qutap {
             compatible = "zmk,behavior-tap-dance";
-            label = "QUTAP";
             #binding-cells = <0>;
             bindings = <&qumacro>, <&kp Q>;
 
@@ -277,7 +273,6 @@
 
         extend_line: extend_line {
             compatible = "zmk,behavior-mod-morph";
-            label = "EXTEND_LINE";
             bindings = <&extend_line_right>, <&extend_line_left>;
 
             #binding-cells = <0>;
@@ -286,7 +281,6 @@
 
         select_line: select_line {
             compatible = "zmk,behavior-mod-morph";
-            label = "SELECT_LINE";
             bindings = <&select_line_right>, <&select_line_left>;
 
             #binding-cells = <0>;
@@ -295,7 +289,6 @@
 
         select_word: select_word {
             compatible = "zmk,behavior-mod-morph";
-            label = "SELECT_WORD";
             bindings = <&select_word_right>, <&select_word_left>;
 
             #binding-cells = <0>;
@@ -304,7 +297,6 @@
 
         extend_word: extend_word {
             compatible = "zmk,behavior-mod-morph";
-            label = "EXTEND_WORD";
             bindings = <&extend_word_right>, <&extend_word_left>;
 
             #binding-cells = <0>;
@@ -313,14 +305,12 @@
 
         rotate_extend_word: rotate_extend_word {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "ROTATE_EXTEND_WORD";
             #sensor-binding-cells = <0>;
             bindings = <&extend_word_left>, <&extend_word_right>;
         };
 
         rotate_extend_line: rotate_extend_line {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "ROTATE_EXTEND_LINE";
             #sensor-binding-cells = <0>;
             bindings = <&extend_line_left>, <&extend_line_right>;
         };
@@ -331,21 +321,18 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp COLON &kp MINUS &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "SMILE";
         };
 
         ctrlk: ctrlk {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp LC(K) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "CTRLK";
         };
 
         cmp: comp {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings = <&kp RALT &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
-            label = "COMP";
         };
 
         cmpu: compup {
@@ -360,14 +347,12 @@
                 <&macro_release>,
                 <&kp LSHFT>;
 
-            label = "COMPUP";
         };
 
         isnot: isnot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp I &kp S &kp SPACE &kp N &kp O &kp T &kp SPACE>;
-            label = "ISNOT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -376,7 +361,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
-            label = "LAMBDA";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -385,7 +369,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&lambda &kp LBRC &kp ENTER>;
-            label = "LAMBDABLK";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -394,7 +377,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0>;
-            label = "ZEROZERO";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -403,7 +385,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0>;
-            label = "ZEROZEROZERO";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -418,7 +399,6 @@
                 <&macro_tap>,
                 <&kp U>;
 
-            label = "QUMacro";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -427,7 +407,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RIGHT &kp LA(RIGHT) &kp LA(LEFT) &kp LS(LA(RIGHT))>;
-            label = "SELECT_WORD_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -436,7 +415,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT &kp LA(LEFT) &kp LA(RIGHT) &kp LS(LA(LEFT))>;
-            label = "SELECT_WORD_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -445,7 +423,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LA(RIGHT))>;
-            label = "EXTEND_WORD_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -454,7 +431,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LEFT))>;
-            label = "EXTEND_WORD_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -463,7 +439,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp HOME &kp LS(END)>;
-            label = "SELECT_LINE_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -472,7 +447,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp END &kp LS(HOME)>;
-            label = "SELECT_LINE_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -481,7 +455,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(DOWN) &kp LS(END)>;
-            label = "EXTEND_LINE_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -490,7 +463,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(UP) &kp LS(HOME)>;
-            label = "EXTEND_LINE_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -505,7 +477,6 @@
                 <&macro_tap>,
                 <&kp I &kp J>;
 
-            label = "M_FIJ";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -520,7 +491,6 @@
                 <&macro_tap>,
                 <&kp O>;
 
-            label = "M_JO";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -535,7 +505,6 @@
                 <&macro_tap>,
                 <&kp O &kp U>;
 
-            label = "M_JOU";
             wait-ms = <1>;
             tap-ms = <1>;
         };
@@ -558,7 +527,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Lesswood";
+            display-name = "Lesswood";
         };
 
         recurva_layer {
@@ -589,7 +558,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Recurva";
+            display-name = "Recurva";
         };
 
         semimak_layer {
@@ -621,7 +590,7 @@
                 &inc_dec_kp LEFT RIGHT
             >;
 
-            label = "Semimak";
+            display-name = "Semimak";
         };
 
         Night {
@@ -638,7 +607,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Night";
+            display-name = "Night";
         };
 
         qwerty_layer {
@@ -670,7 +639,7 @@
                 &inc_dec_kp LEFT RIGHT
             >;
 
-            label = "QWERTYuck";
+            display-name = "QWERTYuck";
         };
 
         symbol_layer {
@@ -701,7 +670,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Symbol";
+            display-name = "Symbol";
         };
 
         function_layer {
@@ -733,7 +702,7 @@
                 &inc_dec_kp LEFT RIGHT
             >;
 
-            label = "Function";
+            display-name = "Function";
         };
 
         altsym_layer {
@@ -744,7 +713,7 @@
 &trans         &trans        &trans      &trans         &trans         &trans         &trans        &trans         &trans         &trans
             >;
 
-            label = "Alt Symbol";
+            display-name = "Alt Symbol";
         };
 
         Diacrit_layer {
@@ -755,7 +724,7 @@
 &trans       &trans       &trans       &trans        &trans    &trans        &trans        &trans        &trans        &trans
             >;
 
-            label = "Diacrit";
+            display-name = "Diacrit";
         };
 
         Diacrit_Upper_layer {
@@ -766,7 +735,7 @@
 &trans  &trans  &trans  &trans  &trans    &trans         &trans         &trans         &trans         &trans
             >;
 
-            label = "DIACRIT";
+            display-name = "DIACRIT";
         };
 
         Coding {
@@ -797,7 +766,7 @@
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
                 <&inc_dec_kp LEFT RIGHT>;
 
-            label = "Coding";
+            display-name = "Coding";
         };
 
         nav_layer {
@@ -829,7 +798,7 @@
                 &rotate_extend_word
             >;
 
-            label = "Nav";
+            display-name = "Nav";
         };
 
         adjust_layer {
@@ -840,7 +809,7 @@
 &none         &none         &none         &none         &none             &none        &none       &none  &none  &none
             >;
 
-            label = "Adjust";
+            display-name = "Adjust";
         };
     };
 
