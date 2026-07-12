@@ -18,10 +18,10 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano@2
     shield: waterfowl_left
 #    snippet: studio-rpc-usb-uart
-  - board: nice_nano
+  - board: nice_nano@2
     shield: waterfowl_right
-  - board: nice_nano
+  - board: nice_nano@2
     shield: settings_reset
