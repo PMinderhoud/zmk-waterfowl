@@ -26,7 +26,7 @@
         Semicolon {
             bindings = <&kp SEMI>;
             key-positions = <27 28>;
-            layers = <1 4>;
+            layers = <2 4>;
         };
 
         exclaim {
@@ -37,7 +37,7 @@
         dquot {
             bindings = <&kp DQT>;
             key-positions = <27 28>;
-            layers = <0 5 3>;
+            layers = <1 5 3>;
         };
 
         question {
@@ -67,8 +67,8 @@
 
         grave {
             bindings = <&kp GRAVE>;
-            key-positions = <LT4 LT3>;
-            layers = <0 1 4 11>;
+            key-positions = <LT4 LT3 11 10>;
+            layers = <1 2 4 11 0>;
         };
 
         // Symbol layer
@@ -81,25 +81,25 @@
 
         lambda {
             bindings = <&lambda>;
-            key-positions = <LM1 LM2>;
+            key-positions = <LM1 LM2 13 12>;
             layers = <5>;
         };
 
         lambdablk {
             bindings = <&lambdablk>;
-            key-positions = <LM1 LM2 LM3>;
+            key-positions = <LM1 LM2 LM3 13 12 11>;
             layers = <5>;
         };
 
         ZeroZero {
             bindings = <&zerozero>;
-            key-positions = <RM3 RM4>;
+            key-positions = <RM3 RM4 19 18>;
             layers = <5>;
         };
 
         ZeroZeroZero {
             bindings = <&zerozerozero>;
-            key-positions = <RM2 RM3 RM4>;
+            key-positions = <RM2 RM3 RM4 19 18 17>;
             layers = <5>;
         };
 
@@ -167,13 +167,14 @@
 
         esc_combo {
             bindings = <&kp ESC>;
-            key-positions = <31 38>;
+            key-positions = <31 32>;
+            layers = <0>;
         };
 
         entercombo {
             bindings = <&kp ENTER>;
             key-positions = <19 29>;
-            layers = <2 3>;
+            layers = <0 3>;
         };
 
         and_combo {
@@ -193,6 +194,24 @@
             key-positions = <3 13>;
             layers = <5>;
         };
+
+        c_fij {
+            bindings = <&m_fij>;
+            key-positions = <0 1>;
+            layers = <0>;
+        };
+
+        c_jo {
+            bindings = <&m_jo>;
+            key-positions = <1 2>;
+            layers = <0>;
+        };
+
+        c_jou {
+            bindings = <&m_jou>;
+            key-positions = <1 2 3>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -205,7 +224,7 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-key-positions = <KEYS_R THUMBS 5 6 7 8 19 9 18 16 17 15 25 26 27 28 29 39 38 37 36 35>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
@@ -218,7 +237,7 @@
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
 
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-key-positions = <KEYS_L THUMBS 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33 34>;
             hold-trigger-on-release;             // delay positional check until key-release
         };
 
@@ -475,10 +494,72 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        m_fij: m_fij {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp F>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp I &kp J>;
+
+            label = "M_FIJ";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        m_jo: m_jo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp J>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp O>;
+
+            label = "M_JO";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        m_jou: m_jou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp J>,
+                <&macro_release>,
+                <&kp LSHFT &kp RSHFT>,
+                <&macro_tap>,
+                <&kp O &kp U>;
+
+            label = "M_JOU";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
+        Lesswood_layer {
+            bindings = <
+&kp F          &kp Y         &kp O         &kp U          &qutap           &kp Z    &kp L          &kp D            &kp P        &kp V
+&hml LWIN C    &hml LALT I   &hml LCTRL A  &hml LSHIFT E  &kp MINUS        &kp K    &hmr RSHIFT H  &hmr RCTRL T     &hmr RALT N  &hmr RGUI S
+&kp APOS       &kp COMMA     &kp J         &kp DOT        &kp SEMI         &kp X    &kp M          &kp G            &kp B        &kp W
+&kp BACKSLASH  &lt 11 SPACE  &lt 8 TAB     &kp ENTER      &kp LC(LS(M))    &tog 10  &lt 10 DELETE  &lt 6 BACKSPACE  &lt 5 R      &kp SLASH
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp UP DOWN>,
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp LEFT RIGHT>;
+
+            label = "Lesswood";
+        };
 
         recurva_layer {
             /* Recurva
@@ -543,29 +624,12 @@
             label = "Semimak";
         };
 
-        Dusk_layer {
-            bindings = <
-&kp X        &kp F        &kp D         &kp P          &qutap           &kp SQT  &kp J             &kp O         &kp U         &kp DOT
-&hml LWIN N  &hml LALT S  &hml LCTRL T  &hml LSHIFT C  &kp Y            &kp M    &hmr RSHIFT H     &hmr RCTRL A  &hmr RALT E   &hmr RGUI I
-&kp B        &kp V        &kp K         &kp G          &kp W            &kp Z    &kp L             &kp SEMI      &kp FSLH      &kp COMMA
-&trans       &sk LSHIFT   &lt 11 R      &lt 8 TAB      &kp LC(LS(M))    &tog 10  &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp UP DOWN>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
-                <&inc_dec_kp LEFT RIGHT>;
-
-            label = "Dusk";
-        };
-
         Night {
             bindings = <
-&kp B            &kp F            &kp L         &kp K         &qutap    &kp P     &kp G             &kp O         &kp U         &kp DOT
-&hml LEFT_WIN N  &hml LEFT_ALT S  &hml LCTRL H  &hml LSHFT T  &kp M     &kp Y     &hmr RSHFT C      &hmr RCTRL A  &hmr RALT E   &hmr RWIN I
-&kp X            &kp V            &kp J         &kp D         &kp Z     &kp SQT  &kp W             &kp SEMI       &kp FSLH      &kp COMMA
-&trans           &kp LSHIFT       &lt 11 R  &lt 8 TAB     &trans    &trans    &lt 10 BACKSPACE  &lt 5 SPACE       &lt 6 DELETE  &trans
+&kp B            &kp F            &kp L         &kp K         &qutap    &kp P    &kp G             &kp O         &kp U         &kp DOT
+&hml LEFT_WIN N  &hml LEFT_ALT S  &hml LCTRL H  &hml LSHFT T  &kp M     &kp Y    &hmr RSHFT C      &hmr RCTRL A  &hmr RALT E   &hmr RWIN I
+&kp X            &kp V            &kp J         &kp D         &kp Z     &kp SQT  &kp W             &kp SEMI      &kp FSLH      &kp COMMA
+&trans           &kp LSHIFT       &lt 11 R      &lt 8 TAB     &trans    &trans   &lt 10 BACKSPACE  &lt 5 SPACE   &lt 6 DELETE  &trans
             >;
 
             sensor-bindings =
@@ -628,7 +692,7 @@
 &kp PRCNT       &kp PLUS      &kp MINUS      &kp DOLLAR        &kp LBRC    &kp RBRC  &kp N7  &kp N8  &kp N9  &kp AT
 &hml LWIN EXCL  &hml LALT LT  &hml LCTRL GT  &hml LSHFT EQUAL  &kp LPAR    &kp RPAR  &kp N1  &kp N2  &kp N3  &kp N0
 &kp CARET       &kp ASTRK     &kp SLASH      &kp UNDER         &kp LBKT    &kp RBKT  &kp N4  &kp N5  &kp N6  &kp DOT
-&kp AMPS        &trans        &trans         &trans            &trans      &trans    &trans  &trans  &trans  &kp PIPE
+&kp AMPS        &trans        &kp AMPS       &kp PIPE          &tog 5      &trans    &trans  &trans  &trans  &kp PIPE
             >;
 
             sensor-bindings =
@@ -659,7 +723,7 @@
 &trans    &kp INS   &kp CLCK   &capsword  &trans    &trans  &kp F9  &kp F10  &kp F11  &kp F12
 &kp LWIN  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp F5  &kp F6   &kp F7   &kp F8
 &trans    &trans    &trans     &trans     &trans    &trans  &kp F1  &kp F2   &kp F3   &kp F4
-&trans    &trans    &trans     &trans     &trans    &trans  &trans  &trans   &trans   &trans
+&trans    &trans    &trans     &trans     &tog 6    &trans  &trans  &trans   &trans   &trans
             >;
 
             sensor-bindings = <
@@ -724,7 +788,7 @@
 &kp LS(LA(F))  &kp LS(F8)   &kp F9            &kp F5         &kp LS(F5)     &none      &kp LC(P)      &kp F12        &kp LA(F12)        &none
 &kp LS(LC(F))  &kp F8       &kp F11           &kp F10        &kp LS(F11)    &kp LC(T)  &kp LC(LS(P))  &kp LC(F12)    &kp LC(LS(SPACE))  &none
 &ctrlk Z       &none        &none             &none          &none          &none      &kp LC(G)      &kp LS(F12)    &none              &none
-&none          &kp LC(DOT)  &lt 11 LC(SPACE)  &kp LA(SLASH)  &none          &tog 10    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)      &none
+&none          &kp LC(DOT)  &lt 11 LC(SPACE)  &kp LA(SLASH)  &tog 10        &tog 10    &kp LC(DOT)    &kp LC(SPACE)  &kp LA(SLASH)      &none
             >;
 
             sensor-bindings =
@@ -752,10 +816,10 @@
  */
 
             bindings = <
-&kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LG(V)     &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
+&kp LC(LG(LEFT))  &kp LC(LG(D))  &kp LC(LG(F4))  &kp LC(LG(RIGHT))  &kp LS(LC(ESC))    &kp LC(E)     &kp LC(LEFT)  &kp LS(F10)  &easyclose  &kp LC(RIGHT)
 &kp LWIN          &kp LALT       &kp LCTRL       &kp LSHFT          &kp LC(A)          &kp PSCRN     &kp LEFT      &kp DOWN     &kp UP      &kp RIGHT
 &kp LC(Z)         &kp LC(X)      &kp LC(C)       &kp LC(V)          &kp LG(V)          &kp LG(TAB)   &kp HOME      &kp PG_DN    &kp PG_UP   &kp END
-&trans            &trans         &trans          &trans             &trans             &select_line  &lt 10 ENTER  &trans       &trans      &select_word
+&trans            &trans         &trans          &trans             &tog 11            &select_line  &lt 10 ENTER  &trans       &trans      &select_word
             >;
 
             sensor-bindings = <
@@ -771,7 +835,7 @@
         adjust_layer {
             bindings = <
 &bootloader   &sys_reset    &bt BT_PRV    &bt BT_NXT    &bt BT_CLR_ALL    &bootloader  &sys_reset  &none  &none  &none
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &to 2        &to 0       &to 1  &to 3  &to 4
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &to 0        &to 1       &to 2  &to 3  &to 4
 &none         &none         &none         &out OUT_TOG  &bt BT_CLR_ALL    &none        &none       &none  &none  &none
 &none         &none         &none         &none         &none             &none        &none       &none  &none  &none
             >;
